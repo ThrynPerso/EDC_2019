@@ -43,16 +43,25 @@ public class Emission {
 	public void afficher () {
 		System.out.println("L'id :"+this.id);
 		System.out.println("Le titre :"+this.titre);
-		System.out.println("Le titre original :"+this.titreOrigianl);
-		System.out.println("L'année de production :"+this.id);
-		System.out.println("Le numéro de saison :"+this.id);
-		System.out.println("Le genre :"+this.id);
+		System.out.println("Le titre original :"+this.titreOriginal);
+		System.out.println("L'année de production :"+this.anneeProduction);
+		System.out.println("Le numéro de saison :"+this.numSaison);
+		System.out.println("Le genre :"+this.sonGenre);
 	}
 	public String toString () {
-		
+		return this.id+","+this.titre+","+this.titreOriginal+","+this.anneeProduction+","+this.numSaison+","+this.sonGenre;
 	}
 	public String toXml () {
-		
+		String chaine = "";
+		chaine = "<Emission>\n";
+		chaine += "\t<id>"+this.id+"</id>\n";
+		chaine += "\t<titre>"+this.titre+"</titre>\n";
+		chaine += "\t<titreOriginal>"+this.titreOriginal+"</titreOriginal>\n";
+		chaine += "\t<anneeProduction>"+this.anneeProduction+"</anneeProduction>\n";
+		chaine += "\t<numSaison>"+this.numSaison+"</numSaison>\n";
+		chaine += "\t<sonGenre>"+this.sonGenre+"</sonGenre>\n";
+		chaine += "</Emission>\n";
+		return chaine;
 	}
 	
 	
